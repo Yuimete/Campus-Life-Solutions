@@ -114,20 +114,13 @@ fun DeveloperCard(developer: Developer, modifier: Modifier = Modifier) {
             modifier = Modifier.padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Box(
+            Image(
+                painter = painterResource(id = R.drawable.cls_logo),
+                contentDescription = developer.name,
                 modifier = Modifier
                     .size(60.dp)
                     .clip(CircleShape)
-                    .background(Periwinkle),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = developer.name.firstOrNull()?.toString() ?: "",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Navy
-                )
-            }
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = developer.name,
