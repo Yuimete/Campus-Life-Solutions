@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -24,18 +25,18 @@ import androidx.compose.ui.unit.sp
 import com.campuslife.solutions.R
 import com.campuslife.solutions.ui.theme.*
 
-data class Developer(val name: String, val role: String)
+data class Developer(val name: String, val role: String, val imageRes: Int)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutScreen() {
     val developers = listOf(
-        Developer(stringResource(R.string.dev_pm), "Project Manager"),
-        Developer(stringResource(R.string.dev_lead), "Lead Developer"),
-        Developer(stringResource(R.string.dev_ui), "UI/UX Designer"),
-        Developer(stringResource(R.string.dev_db), "Database Developer"),
-        Developer(stringResource(R.string.dev_qa), "Quality Assurance"),
-        Developer(stringResource(R.string.dev_doc), "Documentation Specialist")
+        Developer(stringResource(R.string.dev_pm), "Project Manager", R.drawable.rome_antonio),
+        Developer(stringResource(R.string.dev_lead), "Lead Developer", R.drawable.manalili_john_renzie),
+        Developer(stringResource(R.string.dev_ui), "UI/UX Designer", R.drawable.john_errol_baul),
+        Developer(stringResource(R.string.dev_db), "Database Developer", R.drawable.jhon_louie_cortez),
+        Developer(stringResource(R.string.dev_qa), "Quality Assurance", R.drawable.arjay_arellano_c),
+        Developer(stringResource(R.string.dev_doc), "Documentation Specialist", R.drawable.andrew_john_valencia_garcia)
     )
 
     Scaffold(
@@ -115,11 +116,12 @@ fun DeveloperCard(developer: Developer, modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.cls_logo),
+                painter = painterResource(id = developer.imageRes),
                 contentDescription = developer.name,
                 modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape)
+                    .size(80.dp)
+                    .clip(CircleShape),
+                contentScale = ContentScale.Crop
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
