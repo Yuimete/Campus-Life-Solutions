@@ -69,7 +69,7 @@ fun AboutScreen() {
             Text(
                 text = "Version 1.0.0",
                 style = MaterialTheme.typography.labelMedium,
-                color = SecondaryText
+                color = Navy
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
@@ -139,7 +139,7 @@ fun DeveloperCard(developer: Developer, modifier: Modifier = Modifier) {
             Text(
                 text = developer.role,
                 style = MaterialTheme.typography.labelSmall,
-                color = SecondaryText,
+                color = Navy,
                 textAlign = TextAlign.Center
             )
         }

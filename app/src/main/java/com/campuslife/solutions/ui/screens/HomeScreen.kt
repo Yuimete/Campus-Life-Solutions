@@ -79,14 +79,16 @@ fun HomeScreen(
                     TextField(
                         value = searchQuery,
                         onValueChange = { viewModel.setSearchQuery(it) },
-                        placeholder = { Text("Search assignments...", color = SecondaryText) },
-                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = SecondaryText) },
+                        placeholder = { Text("Search assignments...", color = Navy) },
+                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = Navy) },
                         modifier = Modifier.fillMaxWidth(),
                         colors = TextFieldDefaults.colors(
                             focusedContainerColor = White,
                             unfocusedContainerColor = White,
                             focusedIndicatorColor = Color.Transparent,
-                            unfocusedIndicatorColor = Color.Transparent
+                            unfocusedIndicatorColor = Color.Transparent,
+                            focusedTextColor = Navy,
+                            unfocusedTextColor = Navy
                         ),
                         singleLine = true
                     )
@@ -135,7 +137,7 @@ fun HomeScreen(
             if (assignments.isEmpty()) {
                 item {
                     Box(modifier = Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
-                        Text("No assignments found", color = SecondaryText)
+                        Text("No assignments found", color = Navy)
                     }
                 }
             }
@@ -172,7 +174,7 @@ fun SummaryCard(title: String, count: Int, modifier: Modifier, color: Color) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = count.toString(), fontSize = 24.sp, fontWeight = FontWeight.Bold, color = color)
-            Text(text = title, style = MaterialTheme.typography.labelMedium, color = SecondaryText)
+            Text(text = title, style = MaterialTheme.typography.labelMedium, color = Navy)
         }
     }
 }
@@ -230,7 +232,7 @@ fun AssignmentCard(assignment: Assignment, onClick: () -> Unit) {
                 )
                 PriorityTag(assignment.priority)
             }
-            Text(text = assignment.subject, style = MaterialTheme.typography.bodyMedium, color = SecondaryText)
+            Text(text = assignment.subject, style = MaterialTheme.typography.bodyMedium, color = Navy)
             Spacer(modifier = Modifier.height(8.dp))
             Surface(
                 color = White,

@@ -83,26 +83,38 @@ fun AddEditAssignmentScreen(
             OutlinedTextField(
                 value = title,
                 onValueChange = { title = it },
-                label = { Text("Title") },
-                modifier = Modifier.fillMaxWidth()
+                label = { Text("Title", color = Navy) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedLabelColor = Navy,
+                    unfocusedLabelColor = Navy
+                )
             )
 
             OutlinedTextField(
                 value = subject,
                 onValueChange = { subject = it },
-                label = { Text("Subject/Course") },
-                modifier = Modifier.fillMaxWidth()
+                label = { Text("Subject/Course", color = Navy) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedLabelColor = Navy,
+                    unfocusedLabelColor = Navy
+                )
             )
 
             OutlinedTextField(
                 value = description,
                 onValueChange = { description = it },
-                label = { Text("Description") },
+                label = { Text("Description", color = Navy) },
                 modifier = Modifier.fillMaxWidth(),
-                minLines = 3
+                minLines = 3,
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedLabelColor = Navy,
+                    unfocusedLabelColor = Navy
+                )
             )
 
-            Text("Priority", style = MaterialTheme.typography.titleMedium, color = White)
+            Text("Priority", style = MaterialTheme.typography.titleMedium, color = Navy)
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Priority.values().forEach { p ->
                     FilterChip(
@@ -111,13 +123,14 @@ fun AddEditAssignmentScreen(
                         label = { Text(p.name) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = RoyalBlue,
-                            selectedLabelColor = White
+                            selectedLabelColor = White,
+                            labelColor = Navy
                         )
                     )
                 }
             }
 
-            Text("Due Date & Time", style = MaterialTheme.typography.titleMedium, color = White)
+            Text("Due Date & Time", style = MaterialTheme.typography.titleMedium, color = Navy)
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(
                     onClick = { showDatePicker = true },

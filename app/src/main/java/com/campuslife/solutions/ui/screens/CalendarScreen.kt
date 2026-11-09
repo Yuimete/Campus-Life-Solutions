@@ -78,7 +78,7 @@ fun CalendarScreen(
                 if (assignmentsForSelectedDate.isEmpty()) {
                     item {
                         Box(modifier = Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
-                            Text("No assignments due this day", color = SecondaryText)
+                            Text("No assignments due this day", color = Navy)
                         }
                     }
                 }
@@ -130,7 +130,7 @@ fun CalendarView(
                         modifier = Modifier.weight(1f),
                         textAlign = TextAlign.Center,
                         style = MaterialTheme.typography.labelMedium,
-                        color = SecondaryText
+                        color = Navy
                     )
                 }
             }

@@ -116,7 +116,7 @@ fun AssignmentDetailScreen(
                 Text(
                     text = "Description",
                     style = MaterialTheme.typography.titleSmall,
-                    color = SecondaryText
+                    color = Navy
                 )
                 Text(
                     text = item.description,
@@ -137,7 +137,7 @@ fun AssignmentDetailScreen(
                 }
             }
         } ?: Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text("Assignment not found", color = SecondaryText)
+            Text("Assignment not found", color = Navy)
         }
     }
 
@@ -172,7 +172,7 @@ fun InfoRow(
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier.fillMaxWidth()) {
-        Text(text = label, style = MaterialTheme.typography.labelMedium, color = SecondaryText)
+        Text(text = label, style = MaterialTheme.typography.labelMedium, color = Navy)
         Text(text = value, style = MaterialTheme.typography.bodyLarge, color = valueColor, fontWeight = FontWeight.Medium)
     }
 }
