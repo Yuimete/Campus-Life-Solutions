@@ -11,7 +11,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.campuslife.solutions.data.local.Assignment
 import com.campuslife.solutions.data.local.Priority
 import com.campuslife.solutions.ui.theme.Navy
 import com.campuslife.solutions.ui.theme.RoyalBlue
@@ -116,7 +115,7 @@ fun AddEditAssignmentScreen(
 
             Text("Priority", style = MaterialTheme.typography.titleMedium, color = Navy)
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Priority.values().forEach { p ->
+                Priority.entries.forEach { p ->
                     FilterChip(
                         selected = priority == p,
                         onClick = { priority = p },
