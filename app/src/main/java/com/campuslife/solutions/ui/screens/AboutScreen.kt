@@ -58,7 +58,7 @@ fun AboutScreen() {
         ) {
             Image(
                 painter = painterResource(id = R.drawable.cls_logo),
-                contentDescription = "Logo",
+                contentDescription = "Campus Life Solutions App Logo",
                 modifier = Modifier.size(120.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
@@ -91,9 +91,12 @@ fun AboutScreen() {
             Spacer(modifier = Modifier.height(16.dp))
             
             developers.chunked(2).forEach { pair ->
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Max),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
                     pair.forEach { dev ->
-                        DeveloperCard(developer = dev, modifier = Modifier.weight(1f))
+                        DeveloperCard(developer = dev, modifier = Modifier.weight(1f).fillMaxHeight())
                     }
                     if (pair.size == 1) Spacer(modifier = Modifier.weight(1f))
                 }
@@ -112,7 +115,9 @@ fun DeveloperCard(developer: Developer, modifier: Modifier = Modifier) {
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(

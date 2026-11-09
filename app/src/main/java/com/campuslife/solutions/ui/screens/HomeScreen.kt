@@ -53,7 +53,7 @@ fun HomeScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Image(
                                 painter = painterResource(id = R.drawable.cls_logo),
-                                contentDescription = null,
+                                contentDescription = "Campus Life Solutions Logo",
                                 modifier = Modifier.size(32.dp)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
@@ -80,7 +80,7 @@ fun HomeScreen(
                         value = searchQuery,
                         onValueChange = { viewModel.setSearchQuery(it) },
                         placeholder = { Text("Search assignments...", color = Navy) },
-                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = Navy) },
+                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = "Search", tint = Navy) },
                         modifier = Modifier.fillMaxWidth(),
                         colors = TextFieldDefaults.colors(
                             focusedContainerColor = White,
@@ -245,7 +245,7 @@ fun AssignmentCard(assignment: Assignment, onClick: () -> Unit) {
                 ) {
                     Icon(
                         painter = painterResource(id = android.R.drawable.ic_menu_my_calendar),
-                        contentDescription = null,
+                        contentDescription = "Due Date",
                         modifier = Modifier.size(14.dp),
                         tint = if (isOverdue) SoftRed else RoyalBlue
                     )
