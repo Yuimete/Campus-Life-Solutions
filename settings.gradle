@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Campus Life Solutions"
+rootProject.name = "Assignment & Deadline Reminder"
 include ':app'

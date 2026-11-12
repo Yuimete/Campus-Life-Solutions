@@ -53,12 +53,12 @@ fun HomeScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Image(
                                 painter = painterResource(id = R.drawable.cls_logo),
-                                contentDescription = "Campus Life Solutions Logo",
+                                contentDescription = "Assignment & Deadline Reminder Logo",
                                 modifier = Modifier.size(32.dp)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
-                                "Campus Life Solutions",
+                                "Assignment & Deadline Reminder",
                                 color = White,
                                 style = MaterialTheme.typography.headlineSmall.copy(fontFamily = androidx.compose.ui.text.font.FontFamily.Serif)
                             )

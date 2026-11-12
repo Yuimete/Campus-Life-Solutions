@@ -58,12 +58,12 @@ fun AboutScreen() {
         ) {
             Image(
                 painter = painterResource(id = R.drawable.cls_logo),
-                contentDescription = "Campus Life Solutions App Logo",
+                contentDescription = "Assignment & Deadline Reminder App Logo",
                 modifier = Modifier.size(120.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Campus Life Solutions",
+                text = "Assignment & Deadline Reminder",
                 style = MaterialTheme.typography.headlineMedium,
                 color = Navy
             )

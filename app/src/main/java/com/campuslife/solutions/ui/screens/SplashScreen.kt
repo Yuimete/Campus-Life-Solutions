@@ -32,12 +32,12 @@ fun SplashScreen(onTimeout: () -> Unit) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Image(
                 painter = painterResource(id = R.drawable.cls_logo),
-                contentDescription = "Campus Life Solutions App Logo",
+                contentDescription = "Assignment & Deadline Reminder App Logo",
                 modifier = Modifier.size(150.dp)
             )
             Spacer(modifier = Modifier.height(24.dp))
             Text(
-                text = "Campus Life Solutions",
+                text = "Assignment & Deadline Reminder",
                 style = MaterialTheme.typography.headlineMedium,
                 color = White
             )
