@@ -14,7 +14,7 @@ val SecondaryText = Color(0xFF5B6B85)
 
 val SoftRed = Color(0xFFD32F2F)
 val SoftGreen = Color(0xFF2E7D32)
-val Amber = Color(0xFFF9A825)
+val Amber = Color(0xFF996600) // Darkened from F9A825 for AA contrast compliance on white background
 
 val NavyDark = Color(0xFF071B38)
 val NavyCard = Color(0xFF0F2A50)
